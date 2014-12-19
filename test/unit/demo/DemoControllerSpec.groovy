@@ -17,7 +17,7 @@ class DemoControllerSpec extends Specification {
 
     void "test invalid command object"() {
         when:
-        request.json = '{"causes":[{"ggg","icon":"deec"}]}'
+        request.json = '{"causes":{"name":"prabh","description":"ggg","icon":"deec"}}'
         controller.saveCreateFunding()
 
         then:
